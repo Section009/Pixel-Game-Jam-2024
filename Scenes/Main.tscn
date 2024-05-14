@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://bqa2lucs888nb"]
+[gd_scene load_steps=2 format=3 uid="uid://cjrw75xblnufj"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://8w25fcb2dhtx" path="res://icon.svg" id="1_mmcvc"]
+
+[node name="GameManager" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-12, 2)
+scale = Vector2(9.29688, 5.38281)
+texture = ExtResource("1_mmcvc")
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_mmcvc")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
