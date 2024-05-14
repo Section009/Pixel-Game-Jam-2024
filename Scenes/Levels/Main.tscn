@@ -74,3 +74,5 @@ one_way_collision_margin = 0.0
 [node name="Player" type="Node2D" parent="."]
 
 [node name="CharacterBody2D" parent="Player" instance=ExtResource("3_0dyfx")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/CharacterBody2D"]
