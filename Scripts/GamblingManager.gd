@@ -2,6 +2,7 @@ class_name GamblingManager
 
 extends StaticBody2D
 
+
 #class vars
 @export var detectionRadius : int = 80
 
@@ -12,7 +13,7 @@ var HIGHLIGHT : Sprite2D
 #startup
 func _ready():
 	HIGHLIGHT = get_node("Highlight")
-	pass 
+	pass
 
 #frame-based update
 func _process(delta):
@@ -32,9 +33,12 @@ func _process(delta):
 func _physics_process(delta):
 	pass
 
+
 #input
 func get_input():
 	if(canActivate and Input.is_action_just_released("Interact")):
 		print("succesfully interacted")
-
+	
 	pass
+
+
