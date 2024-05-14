@@ -19,7 +19,6 @@ var OxygenTimeUI : Label
 func _ready():
 	position = Pos
 	OxygenTimeUI = get_node("UI/OxygenTime")
-	
 	pass 
 
 #frame-based update
@@ -33,6 +32,7 @@ func _process(delta):
 func _physics_process(delta):
 	get_input()
 	pass
+
 
 #functions that specifically regard animation on the player:
 func _get_direction_string(angle:float) -> String:
