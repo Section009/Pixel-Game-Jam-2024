@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blfbfih8m8i35"
-path="res://.godot/imported/ika.png-ff4c31a6271c5ab1eeb349a5198c8fa4.ctex"
+uid="uid://cmcobopsgnbmr"
+path="res://.godot/imported/Ace of Hearts.png-e96268141eafb49ecff191c3067a4e34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ika.png"
-dest_files=["res://.godot/imported/ika.png-ff4c31a6271c5ab1eeb349a5198c8fa4.ctex"]
+source_file="res://Assets/Sprites/Ace of Hearts.png"
+dest_files=["res://.godot/imported/Ace of Hearts.png-e96268141eafb49ecff191c3067a4e34.ctex"]
 
 [params]
 
