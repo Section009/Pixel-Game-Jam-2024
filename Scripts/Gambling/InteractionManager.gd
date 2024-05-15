@@ -13,6 +13,7 @@ var HIGHLIGHT : Sprite2D
 var sceneManager : SceneManager = SceneManager.new()
 
 
+
 #startup
 func _ready():
 	HIGHLIGHT = get_node("Highlight")
@@ -44,5 +45,3 @@ func get_input():
 		get_tree().change_scene_to_file(SceneManager.Gambling[GameName])
 
 	pass
-
-

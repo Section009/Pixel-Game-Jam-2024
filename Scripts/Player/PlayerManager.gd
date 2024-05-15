@@ -4,12 +4,12 @@ extends CharacterBody2D
 
 
 #class vars
-var direction_vector = Vector2.DOWN
-
 static var Pos : Vector2 = Vector2(0.0, 0.0)
 static var Oxygen : float = 120.0
 
 @export var SPEED : float = 300.0
+
+var direction_vector = Vector2.DOWN
 
 
 

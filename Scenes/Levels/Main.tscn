@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://cagaevhe57mk2"]
 
 [ext_resource type="Texture2D" uid="uid://8w25fcb2dhtx" path="res://icon.svg" id="1_xy1ic"]
-[ext_resource type="Script" path="res://Scripts/Gambling/InteractionManager.gd" id="2_o62b2"]
 [ext_resource type="Texture2D" uid="uid://di3xnbumo7o74" path="res://Assets/TileSets/basetileset.png" id="2_wgj4e"]
 [ext_resource type="PackedScene" uid="uid://camxc1xqb65xh" path="res://Prefabs/PlayerPrefab.tscn" id="3_0dyfx"]
 [ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="4_2cxqm"]
+[ext_resource type="Script" path="res://Scripts/Gambling/InteractionManager.gd" id="4_wg7au"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ejlt4"]
 texture = ExtResource("2_wgj4e")
@@ -41,8 +41,10 @@ size = Vector2(130, 130)
 [node name="World" type="Node2D" parent="."]
 
 [node name="Background" type="Sprite2D" parent="World"]
-position = Vector2(-12, 2)
-scale = Vector2(9.29688, 5.38281)
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(0.999998, 0.999998)
+scale = Vector2(24.3718, 17.0918)
 texture = ExtResource("1_xy1ic")
 
 [node name="TileMap" type="TileMap" parent="World"]
@@ -55,7 +57,7 @@ layer_0/tile_data = PackedInt32Array(-131075, 131073, 1, -65540, 131073, 0, -655
 [node name="Slot" type="StaticBody2D" parent="Machines"]
 position = Vector2(0, -103)
 scale = Vector2(1.24, 1.24)
-script = ExtResource("2_o62b2")
+script = ExtResource("4_wg7au")
 
 [node name="Highlight" type="Sprite2D" parent="Machines/Slot"]
 modulate = Color(0.477696, 1, 0.760986, 1)
