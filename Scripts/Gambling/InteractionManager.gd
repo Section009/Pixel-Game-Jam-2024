@@ -1,4 +1,4 @@
-class_name GamblingManager
+class_name MachineManager
 
 extends StaticBody2D
 

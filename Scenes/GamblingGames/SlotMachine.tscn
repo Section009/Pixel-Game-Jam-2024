@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c1x881p6cvjc2"]
 
-[ext_resource type="Script" path="res://Scripts/GamblingExit.gd" id="1_0oyad"]
-[ext_resource type="Script" path="res://Scripts/OxygenManager.gd" id="1_uwx63"]
+[ext_resource type="Script" path="res://Scripts/Gambling/GamblingExit.gd" id="1_0oyad"]
+[ext_resource type="Script" path="res://Scripts/Player/OxygenManager.gd" id="1_uwx63"]
 
 [node name="SlotMachine" type="Node2D"]
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjrw75xblnufj"]
+[gd_scene load_steps=9 format=3 uid="uid://cagaevhe57mk2"]
 
 [ext_resource type="Texture2D" uid="uid://8w25fcb2dhtx" path="res://icon.svg" id="1_xy1ic"]
-[ext_resource type="Script" path="res://Scripts/GamblingManager.gd" id="2_o62b2"]
+[ext_resource type="Script" path="res://Scripts/Gambling/InteractionManager.gd" id="2_o62b2"]
 [ext_resource type="Texture2D" uid="uid://di3xnbumo7o74" path="res://Assets/TileSets/basetileset.png" id="2_wgj4e"]
 [ext_resource type="PackedScene" uid="uid://camxc1xqb65xh" path="res://Prefabs/PlayerPrefab.tscn" id="3_0dyfx"]
+[ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="4_2cxqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ejlt4"]
 texture = ExtResource("2_wgj4e")
@@ -67,6 +68,26 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_xy1ic")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Machines/Slot"]
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_cqqw5")
+one_way_collision_margin = 0.0
+
+[node name="Elevator" type="StaticBody2D" parent="Machines"]
+position = Vector2(-2, -254)
+scale = Vector2(2.61386, 1.24)
+script = ExtResource("4_2cxqm")
+
+[node name="Highlight" type="Sprite2D" parent="Machines/Elevator"]
+modulate = Color(0.477696, 1, 0.760986, 1)
+self_modulate = Color(4.62055e-06, 0.957158, 0.83932, 0.223529)
+scale = Vector2(0.240002, 0.240002)
+texture = ExtResource("1_xy1ic")
+
+[node name="SlotSprite" type="Sprite2D" parent="Machines/Elevator"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_xy1ic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Machines/Elevator"]
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_cqqw5")
 one_way_collision_margin = 0.0
