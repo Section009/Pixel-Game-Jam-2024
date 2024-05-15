@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://camxc1xqb65xh"]
+[gd_scene load_steps=5 format=3 uid="uid://camxc1xqb65xh"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerManager.gd" id="1_fgj3m"]
 [ext_resource type="Texture2D" uid="uid://8w25fcb2dhtx" path="res://icon.svg" id="2_rgryd"]
+[ext_resource type="Script" path="res://Scripts/OxygenManager.gd" id="3_6o2yq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8yknl"]
 size = Vector2(64, 64)
@@ -20,7 +21,8 @@ one_way_collision_margin = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
-position_smoothing_speed = 10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -28,11 +30,10 @@ position_smoothing_speed = 10.0
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -208.0
-offset_top = -11.0
-offset_right = -10.0
-offset_bottom = 126.0
+offset_left = -198.0
+offset_bottom = 137.0
 grow_horizontal = 0
 theme_override_font_sizes/font_size = 80
 text = "2:00"
-horizontal_alignment = 2
+horizontal_alignment = 1
+script = ExtResource("3_6o2yq")

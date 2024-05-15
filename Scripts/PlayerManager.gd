@@ -11,21 +11,16 @@ static var Oxygen : float = 120.0
 
 @export var SPEED : float = 300.0
 
-var OxygenTimeUI : Label
-
 
 
 #startup
 func _ready():
 	position = Pos
-	OxygenTimeUI = get_node("UI/OxygenTime")
 	pass 
 
 #frame-based update
 func _process(delta):
 	Pos = position
-	Oxygen -= delta
-	OxygenTimeUI.text =  str(int(Oxygen)/60) + ":" + str(int(Oxygen)%60)
 	pass
 
 #constant delta update
