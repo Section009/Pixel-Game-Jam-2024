@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cagaevhe57mk2"]
+[gd_scene load_steps=11 format=3 uid="uid://cagaevhe57mk2"]
 
 [ext_resource type="Texture2D" uid="uid://8w25fcb2dhtx" path="res://icon.svg" id="1_xy1ic"]
 [ext_resource type="Texture2D" uid="uid://di3xnbumo7o74" path="res://Assets/TileSets/basetileset.png" id="2_wgj4e"]
 [ext_resource type="PackedScene" uid="uid://camxc1xqb65xh" path="res://Prefabs/PlayerPrefab.tscn" id="3_0dyfx"]
 [ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="4_2cxqm"]
 [ext_resource type="Script" path="res://Scripts/Gambling/InteractionManager.gd" id="4_wg7au"]
+[ext_resource type="Texture2D" uid="uid://dttwip03wkw0a" path="res://Assets/Sprites/SlotMachinex4.png" id="4_y48e4"]
+[ext_resource type="Texture2D" uid="uid://bul0sj760qk0p" path="res://Assets/Sprites/ElevatorDoorx4.png" id="5_v1yad"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ejlt4"]
 texture = ExtResource("2_wgj4e")
@@ -66,8 +68,10 @@ scale = Vector2(0.240002, 0.240002)
 texture = ExtResource("1_xy1ic")
 
 [node name="SlotSprite" type="Sprite2D" parent="Machines/Slot"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_xy1ic")
+texture_filter = 1
+position = Vector2(-1.90735e-06, -9.53674e-07)
+scale = Vector2(0.352823, 0.327621)
+texture = ExtResource("4_y48e4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Machines/Slot"]
 scale = Vector2(0.2, 0.2)
@@ -86,8 +90,10 @@ scale = Vector2(0.240002, 0.240002)
 texture = ExtResource("1_xy1ic")
 
 [node name="SlotSprite" type="Sprite2D" parent="Machines/Elevator"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_xy1ic")
+texture_filter = 1
+position = Vector2(0.191288, 1.20968)
+scale = Vector2(0.283943, 0.371724)
+texture = ExtResource("5_v1yad")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Machines/Elevator"]
 scale = Vector2(0.2, 0.2)
