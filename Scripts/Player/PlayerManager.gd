@@ -35,12 +35,12 @@ func _get_direction_string(angle:float) -> String:
 	if(angle_deg > -90.0 and angle_deg < 90.0):
 		return "Right"
 	return "Left"
+
 func _play_animation(animation_type:String) -> void:
 	var animation_player = $AnimationPlayer
 	var animation_name = animation_type + "_" + _get_direction_string(direction_vector.angle())
 	animation_player.play(animation_name)
 	
-
 
 #input
 func get_input():

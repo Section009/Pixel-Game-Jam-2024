@@ -27,5 +27,6 @@ func _on_button_pressed():
 	print("holy moly")
 	for i in 3:
 		slotValue[i] = randi()%3
+		
 	gambleButton.text = str(slotValue[0])
 	pass
