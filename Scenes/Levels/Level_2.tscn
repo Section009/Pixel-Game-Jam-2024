@@ -1,3 +1,89 @@
-[gd_scene format=3 uid="uid://bdjgmo308mwvk"]
+[gd_scene load_steps=9 format=3 uid="uid://bdjgmo308mwvk"]
+
+[ext_resource type="Script" path="res://Scripts/Gambling/InteractionManager.gd" id="1_74xl6"]
+[ext_resource type="Texture2D" uid="uid://8w25fcb2dhtx" path="res://icon.svg" id="2_fkchp"]
+[ext_resource type="Texture2D" uid="uid://dttwip03wkw0a" path="res://Assets/Sprites/SlotMachinex4.png" id="3_vl7qf"]
+[ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="4_baxcj"]
+[ext_resource type="Texture2D" uid="uid://bul0sj760qk0p" path="res://Assets/Sprites/ElevatorDoorx4.png" id="5_ae0jw"]
+[ext_resource type="Texture2D" uid="uid://crhrqfgai4xmt" path="res://Assets/Sprites/Wheelx4.png" id="6_fr0fm"]
+[ext_resource type="PackedScene" uid="uid://camxc1xqb65xh" path="res://Prefabs/PlayerPrefab.tscn" id="7_b3eyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhmev"]
+size = Vector2(139.792, 149.547)
 
 [node name="Level2" type="Node2D"]
+
+[node name="Machines" type="Node2D" parent="."]
+
+[node name="Slot" type="StaticBody2D" parent="Machines"]
+position = Vector2(-50, -102)
+scale = Vector2(1.24, 1.24)
+script = ExtResource("1_74xl6")
+
+[node name="Highlight" type="Sprite2D" parent="Machines/Slot"]
+modulate = Color(0.477696, 1, 0.760986, 1)
+self_modulate = Color(4.62055e-06, 0.957158, 0.83932, 0.223529)
+scale = Vector2(0.240002, 0.240002)
+texture = ExtResource("2_fkchp")
+
+[node name="SlotSprite" type="Sprite2D" parent="Machines/Slot"]
+texture_filter = 1
+position = Vector2(-1.90735e-06, -9.53674e-07)
+scale = Vector2(0.352823, 0.327621)
+texture = ExtResource("3_vl7qf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Machines/Slot"]
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_jhmev")
+one_way_collision_margin = 0.0
+
+[node name="Elevator" type="StaticBody2D" parent="Machines"]
+position = Vector2(-2, -254)
+scale = Vector2(2.61386, 1.24)
+script = ExtResource("4_baxcj")
+
+[node name="Highlight" type="Sprite2D" parent="Machines/Elevator"]
+modulate = Color(0.477696, 1, 0.760986, 1)
+self_modulate = Color(4.62055e-06, 0.957158, 0.83932, 0.223529)
+scale = Vector2(0.240002, 0.240002)
+texture = ExtResource("2_fkchp")
+
+[node name="SlotSprite" type="Sprite2D" parent="Machines/Elevator"]
+texture_filter = 1
+position = Vector2(0.191288, 1.20968)
+scale = Vector2(0.283943, 0.371724)
+texture = ExtResource("5_ae0jw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Machines/Elevator"]
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_jhmev")
+one_way_collision_margin = 0.0
+
+[node name="Wheel" type="StaticBody2D" parent="Machines"]
+position = Vector2(65, -103)
+scale = Vector2(1.5376, 1.5376)
+script = ExtResource("1_74xl6")
+GameName = "wheel"
+
+[node name="Highlight" type="Sprite2D" parent="Machines/Wheel"]
+modulate = Color(0.477696, 1, 0.760986, 1)
+self_modulate = Color(4.62055e-06, 0.957158, 0.83932, 0.223529)
+scale = Vector2(0.240002, 0.240002)
+texture = ExtResource("2_fkchp")
+
+[node name="SlotSprite" type="Sprite2D" parent="Machines/Wheel"]
+texture_filter = 1
+position = Vector2(0.650384, 0.650376)
+scale = Vector2(0.274372, 0.254048)
+texture = ExtResource("6_fr0fm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Machines/Wheel"]
+position = Vector2(0.979198, 1.95474)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_jhmev")
+one_way_collision_margin = 0.0
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(0, -4)
+
+[node name="CharacterBody2D" parent="Player" instance=ExtResource("7_b3eyh")]

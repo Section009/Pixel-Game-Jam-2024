@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://vkghsqh04ujp"]
+
+[ext_resource type="Script" path="res://Scripts/Player/OxygenManager.gd" id="1_evssb"]
+[ext_resource type="Script" path="res://Scripts/Gambling/GamblingExit.gd" id="2_ro562"]
+[ext_resource type="Script" path="res://Scripts/Gambling/BasicWheel.gd" id="3_yrc1c"]
+
+[node name="WheelSpin" type="Node2D"]
+script = ExtResource("3_yrc1c")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="OxygenTime" type="Label" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -198.0
+offset_bottom = 137.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 80
+text = "2:00"
+horizontal_alignment = 1
+script = ExtResource("1_evssb")
+
+[node name="Back" type="Button" parent="UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -124.0
+offset_top = -77.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+script = ExtResource("2_ro562")
+
+[node name="WheelButton" type="Button" parent="."]
+offset_left = 958.0
+offset_top = 430.0
+offset_right = 1079.0
+offset_bottom = 473.0
+text = "PRESS TO SPIN"
+
+[connection signal="pressed" from="WheelButton" to="." method="_on_wheel_button_pressed"]
